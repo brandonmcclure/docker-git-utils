@@ -10,6 +10,11 @@ else
  echo "file parameter is empty" && exit -1
 fi
 
+if [[ -f $file ]];then
+    echo "$file exists"
+else
+  echo "$file does not exist" &&   exit -1
+fi
 
 b=$(tput bold) # Pretty print
 n=$(tput sgr0)
