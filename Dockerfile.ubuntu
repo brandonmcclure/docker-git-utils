@@ -1,0 +1,11 @@
+FROM ubuntu:latest
+
+RUN apt update -y \
+&& DEBIAN_FRONTEND=noninteractive apt install git -y 
+
+COPY src/shell /app
+
+WORKDIR /src
+VOLUME /src
+
+ENTRYPOINT [ "/bin/bash" ]
