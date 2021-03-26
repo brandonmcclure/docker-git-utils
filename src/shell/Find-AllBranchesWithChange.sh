@@ -2,7 +2,7 @@
 # source: https://stackoverflow.com/a/64467454/
 
 file=$1
-base=${2:-master}
+base=${2:-main}
 
 if [[ ! -z "$file" ]]; then
 echo "Searching for branches with changes to $file related to the $base branch" 
